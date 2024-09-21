@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import bghero from "../assets/bg/bg-3.jpg";
+import bghero from "../assets/bg/bg-1.jpg";
 import earth from "../assets/earth.png";
 import bitcoin from "../assets/bitcoin.png";
 import { IoChevronForward } from "react-icons/io5";
