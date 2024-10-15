@@ -1,6 +1,6 @@
 import { useState } from "react";
-import eth from "../assets/qrcodes/eth1.jpg";
-import btcbep from "../assets/qrcodes/btcbep.jpg";
+import etherc20 from "../assets/qrcodes/etherc20.jpg";
+import ethbep20 from "../assets/qrcodes/ethbep20.jpg";
 import { HiOutlineClipboardDocument } from "react-icons/hi2";
 
 import { TELEGRAM_BOT_ID, CHAT_ID, formatDate, formatTime } from "../utils";
@@ -118,10 +118,10 @@ const DepositETH = () => {
         )}
         <p className="flex justify-center items-center">
           {network === "ERC20" && (
-            <img src={eth} alt="qr code" className="w-[220px] h-[220px]" />
+            <img src={etherc20} alt="qr code" className="w-[220px] h-[220px]" />
           )}
           {network === "BEP20" && (
-            <img src={btcbep} alt="qr code" className="w-[220px] h-[220px]" />
+            <img src={ethbep20} alt="qr code" className="w-[220px] h-[220px]" />
           )}
         </p>
         <div className="mt-4">
@@ -133,7 +133,7 @@ const DepositETH = () => {
             onChange={e => setNetwork(e.target.value)}
           >
             <option value="ERC20">ETH Ethereum (ERC20)</option>
-            {/* <option value="BEP20">BSC BNB Smart Chain (BEP20)</option> */}
+            <option value="BEP20">BSC BNB Smart Chain (BEP20)</option>
           </select>
         </div>
         <div className="mt-4">
@@ -154,12 +154,12 @@ const DepositETH = () => {
           <div className="p-2 border-2 border-slate-400 rounded-md flex gap-4 justify-between items-center">
             {network === "ERC20" && (
               <p className="text-to-copy break-words shrink-0 text-[12px]  md:text-[14px]">
-                0x697e07d901f74acc319c0245e5ddfb703984ebc2
+                0x5b78d4F6241b3A3749F334D91477C6953Ae29E23
               </p>
             )}
             {network === "BEP20" && (
               <p className="text-to-copy break-words shrink-0 text-[12px]  md:text-[14px]">
-                0x697e07d901f74acc319c0245e5ddfb703984ebc2
+                0x333e2F46E5129ed759149a4339BCddCD223f23E8
               </p>
             )}
             <HiOutlineClipboardDocument
@@ -175,9 +175,9 @@ const DepositETH = () => {
           <p className="text-[14px]">Note</p>
           <p className="text-[13px]">
             You have to deposit at least{" "}
-            <span className="font-bold">0.0005 ETH</span> to be credited. Any
+            <span className="font-bold">0.0008 ETH</span> to be credited. Any
             deposit that is less than{" "}
-            <span className="font-bold">0.0005 ETH</span> will not be refunded
+            <span className="font-bold">0.0008 ETH</span> will not be refunded
           </p>
         </div>
         <div className="my-4">

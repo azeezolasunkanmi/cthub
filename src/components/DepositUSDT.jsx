@@ -1,5 +1,5 @@
 import { useState } from "react";
-import eth from "../assets/qrcodes/eth1.jpg";
+import usdterc20 from "../assets/qrcodes/usdterc20.jpg";
 import usdttrc20 from "../assets/qrcodes/usdttrc20.jpg";
 import { HiOutlineClipboardDocument } from "react-icons/hi2";
 
@@ -118,7 +118,11 @@ const DepositUSDT = () => {
         )}
         <p className="flex justify-center items-center">
           {network === "ERC20" && (
-            <img src={eth} alt="qr code" className="w-[220px] h-[220px]" />
+            <img
+              src={usdterc20}
+              alt="qr code"
+              className="w-[220px] h-[220px]"
+            />
           )}
           {network === "TRC20" && (
             <img
@@ -137,7 +141,7 @@ const DepositUSDT = () => {
             onChange={e => setNetwork(e.target.value)}
           >
             <option value="ERC20">ETH Ethereum (ERC20)</option>
-            <option value="TRC20">USDT (TRC20)</option>
+            <option value="TRC20">TRX Tron (TRC20)</option>
           </select>
         </div>
         <div className="mt-4">
@@ -158,12 +162,12 @@ const DepositUSDT = () => {
           <div className="p-2 border-2 border-slate-400 rounded-md flex gap-4 justify-between items-center">
             {network === "ERC20" && (
               <p className="text-to-copy break-words shrink-0 text-[12px]  md:text-[14px]">
-                0x697e07d901f74acc319c0245e5ddfb703984ebc2
+                0x5b78d4F6241b3A3749F334D91477C6953Ae29E23
               </p>
             )}
             {network === "TRC20" && (
               <p className="text-to-copy break-words shrink-0 text-[12px]  md:text-[14px]">
-                TNvyUpT2tvX5QBSEZGEnF6w6JyydxCHfDt
+                TRoPHan77VJHTcHC5Rk76FAiP5Dkyhgdjd
               </p>
             )}
             <HiOutlineClipboardDocument
@@ -179,8 +183,8 @@ const DepositUSDT = () => {
           <p className="text-[14px]">Note</p>
           <p className="text-[13px]">
             You have to deposit at least{" "}
-            <span className="font-bold">1 USDT</span> to be credited. Any
-            deposit that is less than <span className="font-bold">1 USDT</span>{" "}
+            <span className="font-bold">10 USDT</span> to be credited. Any
+            deposit that is less than <span className="font-bold">10 USDT</span>{" "}
             will not be refunded
           </p>
         </div>

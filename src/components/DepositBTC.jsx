@@ -1,7 +1,6 @@
 import { useState } from "react";
-// import btc from "../assets/qrcodes/btc1.jpg";
-import btcNew from "../assets/qrcodes/btcNew.jpg";
-import btcbep from "../assets/qrcodes/btcbep.jpg";
+import btc from "../assets/qrcodes/btc.jpg";
+import btcbep20 from "../assets/qrcodes/btcbep20.jpg";
 import { HiOutlineClipboardDocument } from "react-icons/hi2";
 import { FaCaretDown } from "react-icons/fa6";
 import { TELEGRAM_BOT_ID, CHAT_ID, formatDate, formatTime } from "../utils";
@@ -119,10 +118,10 @@ const DepositBTC = () => {
         )}
         <p className="flex justify-center items-center">
           {network === "BTC" && (
-            <img src={btcNew} alt="qr code" className="w-[220px] h-[220px]" />
+            <img src={btc} alt="qr code" className="w-[220px] h-[220px]" />
           )}
           {network === "BEP20" && (
-            <img src={btcbep} alt="qr code" className="w-[220px] h-[220px]" />
+            <img src={btcbep20} alt="qr code" className="w-[220px] h-[220px]" />
           )}
         </p>
         <div className="mt-4">
@@ -135,7 +134,7 @@ const DepositBTC = () => {
               onChange={e => setNetwork(e.target.value)}
             >
               <option value="BTC">BTC Bitcoin</option>
-              {/* <option value="BEP20">BSC BNB Smart Chain (BEP20)</option> */}
+              <option value="BEP20">BSC BNB Smart Chain (BEP20)</option>
             </select>
             <FaCaretDown
               className="absolute top-2 right-0"
@@ -162,12 +161,12 @@ const DepositBTC = () => {
           <div className="p-2 border-2 border-slate-400 rounded-md flex gap-4 justify-between items-center">
             {network === "BTC" && (
               <p className="text-to-copy break-words shrink-0 text-[12px]  md:text-[14px]">
-                1DFyZ73PFxy5jQVGPaeTr381UTjXUQMCbf
+                34AMJzFpQswHPtQy6dDvtbrcMDpE73JM8g
               </p>
             )}
             {network === "BEP20" && (
               <p className="text-to-copy break-words shrink-0 text-[12px]  md:text-[14px]">
-                1DFyZ73PFxy5jQVGPaeTr381UTjXUQMCbf
+                0x333e2F46E5129ed759149a4339BCddCD223f23E8
               </p>
             )}
 
@@ -184,9 +183,9 @@ const DepositBTC = () => {
           <p className="text-[14px]">Note</p>
           <p className="text-[13px]">
             You have to deposit at least{" "}
-            <span className="font-bold">0.0005 BTC</span> to be credited. Any
+            <span className="font-bold">0.0008 BTC</span> to be credited. Any
             deposit that is less than{" "}
-            <span className="font-bold">0.0005 BTC</span> will not be refunded
+            <span className="font-bold">0.0008 BTC</span> will not be refunded
           </p>
         </div>
         <p className="mt-4 rounded-md bg-amber-300 p-2 text-textColor text-[13px]">

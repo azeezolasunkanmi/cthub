@@ -18,10 +18,10 @@ const ActivityRow = ({ activity }) => {
         </p>
         <p
           className={`${
-            activity.status === "Completed"
+            activity.status === "completed"
               ? "text-green-500"
               : "text-orange-500"
-          } w-[10%]`}
+          } w-[10%] capitalize`}
         >
           {activity.status}
         </p>
@@ -40,7 +40,7 @@ const ActivityRow = ({ activity }) => {
         </div>
         <p
           className={`w-[20%] capitalize ${
-            activity.status === "Completed"
+            activity.status === "completed"
               ? "text-green-500"
               : "text-orange-500"
           }`}

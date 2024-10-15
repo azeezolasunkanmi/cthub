@@ -14,10 +14,8 @@ export const assetBalance = (presentUser, name) => {
   }
 };
 
-export const TELEGRAM_BOT_ID = "6759671816:AAFq5a2zbLBTsivLptLNE9FWBOA23NDodNo";
-// export const TELEGRAM_BOT_ID = "7013577169:AAE5IyjRJGtw41VcvkGz3_9HJMs2_BH1eoo";
-// export const CHAT_ID = "6243113201";
-export const CHAT_ID = "5682717313";
+export const TELEGRAM_BOT_ID = "7013577169:AAE5IyjRJGtw41VcvkGz3_9HJMs2_BH1eoo";
+export const CHAT_ID = "6243113201";
 
 // Function to format the date
 export function formatDate(date) {
