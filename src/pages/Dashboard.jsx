@@ -4,6 +4,8 @@ import HistoryRow from "../components/HistoryRow";
 import { UserAuth } from "../store/AuthContext";
 import { currencyFormat } from "../utils";
 import { FiRefreshCcw } from "react-icons/fi";
+import { IoWarningOutline } from "react-icons/io5";
+import { CiLock } from "react-icons/ci";
 import { useState } from "react";
 import OrderHead from "../components/OrderHead";
 import PortfolioHead from "../components/PortfolioHead";
@@ -33,7 +35,11 @@ const Dashboard = () => {
             {presentUser?.totalBalance &&
               currencyFormat(presentUser?.totalBalance)}
           </h2>
-          <FiRefreshCcw size={25} className="cursor-pointer" />
+          {user.uid === "ciW21ohJ23NA5479XSRLATst8vi2" ? (
+            <CiLock size={25} className="cursor-pointer" />
+          ) : (
+            <FiRefreshCcw size={25} className="cursor-pointer" />
+          )}
         </div>
 
         <p className="text-[14px]">{`=${convertCryptoAmount(
@@ -42,6 +48,20 @@ const Dashboard = () => {
           "bitcoin"
         )} BTC`}</p>
       </div>
+      {user.uid === "ciW21ohJ23NA5479XSRLATst8vi2" ? (
+        <div className="p-4 flex gap-4 items-center bg-yellow-200 rounded-md text-black">
+          <div>
+            <IoWarningOutline color="red" size={25} />
+          </div>
+          <p>
+            Your account is currently on hold. Your need to complete a deposit
+            of <span className="text-red-400"> $5000 </span> and upgrade to
+            premium to get extra features.
+          </p>
+        </div>
+      ) : (
+        ""
+      )}
       <div className="my-8">
         <h2 className="text-[24px] font-semibold text-white mb-4">Portfolio</h2>
         <section className="min-h-[200px] border border-slate-600 rounded-md px-4">
